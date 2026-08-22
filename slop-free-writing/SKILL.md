@@ -115,13 +115,43 @@ The same rubric grades formatting on restraint. Most workplace documents should 
 - Avoid decorative rules, colored callouts and headings, three-part title treatments (eyebrow/title/subtitle), zebra striping, heavy borders, decorative separators (· | •), and charts or tables added for decoration rather than understanding.
 - Prefer a simple list over a table unless rows and columns genuinely aid comparison; use native numbered lists, never text-shaped numbering like "1 |".
 
+## The cadence check — run this, do not eyeball it
+
+Failure mode 1 lists staged cadence and rhetorical triads, and the revision pass
+says to sweep for manufactured rhythm. That is not enough on its own, because
+every example in this skill is a **single sentence** and the hardest version of
+this failure is **spread across several**. Each sentence passes inspection alone;
+the slop is only visible in the shape they make together. You cannot catch that
+by re-reading for meaning — re-reading is how it got written.
+
+So run four mechanical checks over the draft. They take seconds and they do not
+depend on taste.
+
+1. **Runs of short sentences.** Three or more consecutive sentences under about
+   ten words, in body prose. Real explanation varies in length; cadence does not.
+2. **Repeated sentence openers.** Two or more consecutive sentences starting with
+   the same word or the same frame — "The first… The second…", "It is… It is…",
+   "No X… No Y…".
+3. **One- and two-word sentences.** "Five." "Never." "That is the point." Almost
+   always a staged reveal of something a full sentence could just say.
+4. **Meta-paragraphs.** A paragraph whose subjects are *sentence, first, second,
+   point, paragraph, above, below* is describing the text rather than adding to
+   it. Delete it and check whether anything was lost.
+
+Then the question that subsumes all four: **for each sentence, name the new fact
+it carries.** A sentence that carries none is rhythm. Cut it or merge it.
+
+A caution in the other direction: short sentences are not banned. "The build is
+broken. Rollback is at 4pm." is two facts in nine words. The test is whether each
+one earns its full stop with information, not whether it is short.
+
 ## Revision pass
 
 When editing a draft (yours or the user's), make one deliberate pass:
 
 1. Delete throat-clearing, meta-announcements, restated requests, and redundant conclusions. Move the answer to the first sentence.
 2. For each sentence ask: what changed, who did it, and how would the reader verify it? Rewrite around a concrete subject and verb; attach the number, source, or constraint if one exists. If none exists, either cut the claim or mark it honestly as interpretation — never fabricate support.
-3. Sweep for the four failure modes above, especially manufactured rhythm, "not X but Y" constructions, AI vocabulary, and tacked-on benefits.
+3. Sweep for the four failure modes above, especially "not X but Y" constructions, AI vocabulary, and tacked-on benefits. For manufactured rhythm run the four cadence checks — that failure hides from a read-through by design.
 4. Compress. Keep real qualifications; cut stacked hedges and filler.
 5. Final check: no invented facts, nuance intact, and an expert would believe a human professional wrote it.
 
