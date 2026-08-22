@@ -186,3 +186,77 @@ Most workplace documents: minimal structure, mostly black text on white, easy to
 **Skimmability:** clear headings, readable paragraphs, useful white space, and native elements (bullets, numbered lists, checkboxes) where they help — judged against the document type. A research report should be skimmable; a legal brief is legitimately dense.
 
 **Overall document judgment:** score holistically, not as an average. A major failure (instruction-following miss, unsupported claim, fabricated or missing required citation, omission that prevents professional use) caps the document regardless of strengths elsewhere. Ask: is it ready for real use? Does it succeed for the apparent audience and purpose? How much revision before it could be confidently shared?
+
+
+---
+
+## Multi-sentence cadence — the cases every other example here misses
+
+Every example above is one sentence. These are not, and that is the point: read
+any single sentence in the "before" columns and it passes. The slop is the shape
+across them. All three shipped past a writer who had this skill open, which is
+why the cadence check in SKILL.md is mechanical rather than a matter of noticing.
+
+### Staged reveal
+
+Sub-pattern: *staged cadence* (failure mode 1), plus a colon used for rhythm.
+
+**Before:** "Five. That is the threshold sleep researchers use to call a bedtime
+routine consistent, and the effect is graded: each additional night is associated
+with better sleep than the night before it."
+
+**After:** "Sleep researchers treat five nights a week as the point at which a
+bedtime routine counts as consistent. Below that the association with better
+sleep weakens, and it keeps improving above it."
+
+Two tells. The one-word opener withholds a number for a beat, and the colon after
+"graded" manufactures a second one. Neither adds information — the after version
+carries strictly more, because "below that / above it" says which direction the
+effect runs and the original only gestured at it.
+
+Caught by: check 3 (one-word sentence).
+
+### Parallel-sentence block
+
+Sub-patterns: *staged cadence* and *rhetorical triad* (failure mode 1), and
+*restating what the reader just read* (failure mode 4).
+
+**Before:** "Two sentences, sitting next to each other. The first is evidence
+about a practice. The second describes what the product is. The inference between
+them belongs to the parent, and we do not make it for them."
+
+**After:** "The first sentence is evidence about reading aloud. The second says
+what HearLoom is. We stop there rather than joining them, because the study
+behind the first sentence did not test the second."
+
+This one sat directly beneath a two-sentence quote, so three of its four
+sentences described something the reader had finished reading a moment earlier.
+The after version keeps the two that orient and replaces the cadence with the
+actual reason — the study did not test the product — which the original never
+stated at all.
+
+Caught by: check 1 (four short sentences in a row), check 2 ("The first… The
+second… The inference…"), check 4 (its subjects are *sentence, first, second,
+inference*).
+
+### Heading pattern broken for effect
+
+Sub-pattern: *staged cadence* applied to document structure. Borderline, and
+worth saying why it lands on the slop side: the first two headings are genuine
+parallelism of the kind SKILL.md protects, so only the one that abandons the
+pattern for a beat is flagged.
+
+**Before:** "## Writing: the constraint problem" / "## Illustrating: the
+consistency problem" / "## Narrating: the point"
+
+**After:** the first two unchanged; the third becomes "## Narrating: cloning a
+real voice".
+
+The first two name a real engineering problem each and are worth keeping — this
+is the parallelism SKILL.md says to protect. The third abandons the pattern to
+land a beat, and the sentence beneath it did the same ("the voice is the reason
+the product exists"). A reader looking for what the narration step *does* gets
+a flourish instead.
+
+Caught by: check 4, applied to headings — "the point" describes the document's
+argument rather than the subject matter.
