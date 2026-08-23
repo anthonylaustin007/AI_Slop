@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0 — 2026-08-21
+
+- `slop-free-writing/scripts/cadence.py`: the cadence checks as a runnable
+  script. No dependencies, reads files or stdin, exits non-zero on a hit so it
+  can gate CI. Skips code fences, frontmatter, headings, tables, lists and
+  blockquotes, where short lines are correct rather than staccato.
+- `SKILL.md`: the cadence section now points at the script, and says plainly
+  that it flags rather than judges — a paragraph genuinely about two sentences
+  trips check 4 and is right to.
+- `references/failure-modes.md`: a "do not flag" counterexample showing exactly
+  that case, so the output is not read as a linter that must reach zero.
+
+Run against the three articles that prompted version 1.1.0, the script found a
+fourth passage the hand edit had missed ("It does not need to be long. It needs
+to be the same.") and caught one bug in itself: headings deeper than `#` were
+being parsed as prose.
+
 ## 1.1.0 — 2026-08-21
 
 Cadence: the failure the skill named but could not catch.

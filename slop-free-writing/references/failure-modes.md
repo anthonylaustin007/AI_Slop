@@ -260,3 +260,21 @@ a flourish instead.
 
 Caught by: check 4, applied to headings — "the point" describes the document's
 argument rather than the subject matter.
+
+
+### Do not flag: a paragraph that is legitimately about the text
+
+"The first sentence is evidence about reading aloud. The second says what
+HearLoom is. We stop there rather than joining them, because the study behind
+the first sentence did not test the second."
+
+`scripts/cadence.py` flags this twice — repeated opener "The", and check 4,
+because its subjects are *first, second, sentence*. Both are correct readings
+and the paragraph still survives, because it sits directly beneath a
+two-sentence quote and its job is to say what those two sentences do and do not
+license. The meta-vocabulary is the subject matter rather than a tic, and the
+final clause carries a fact the reader cannot get anywhere else: no study behind
+that policy tested this product.
+
+This is the shape of a true positive that should not be edited. Kept here so the
+checks are not read as a linter whose output must go to zero.

@@ -141,6 +141,18 @@ depend on taste.
 Then the question that subsumes all four: **for each sentence, name the new fact
 it carries.** A sentence that carries none is rhythm. Cut it or merge it.
 
+`scripts/cadence.py` runs checks 1–4 over markdown or plain text, with no
+dependencies, and exits non-zero when it finds something:
+
+```
+scripts/cadence.py draft.md          # or: cat draft.md | scripts/cadence.py -
+```
+
+It skips code fences, frontmatter, headings, tables, lists and blockquotes,
+where short lines are correct rather than staccato. It cannot judge whether a
+flagged run earns its rhythm, so treat a hit as "look at this". A paragraph
+genuinely *about* two sentences will trip check 4 and be right to.
+
 A caution in the other direction: short sentences are not banned. "The build is
 broken. Rollback is at 4pm." is two facts in nine words. The test is whether each
 one earns its full stop with information, not whether it is short.
