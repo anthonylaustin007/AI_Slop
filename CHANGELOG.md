@@ -1,5 +1,37 @@
 # Changelog
 
+## 1.3.0 — 2026-08-24
+
+Vocabulary and whole documents.
+
+- `SKILL.md`: new "Vocabulary" section. The old list was eleven words. The new
+  one is 118 words and phrases, in five groups named for the job the word does:
+  verbs that inflate an action (leverage, spearhead, streamline), adjectives
+  that assert quality with the evidence removed (robust, seamless,
+  comprehensive), nouns that gesture at scale (landscape, ecosystem, journey),
+  stock phrases that fill the slot where the point should be (at its core,
+  it's worth noting, moving forward), and transitions doing work the sentences
+  should do (Additionally, Moreover, Firstly). Each group says what to put in
+  the word's place, and the section keeps the rule that no word is banned:
+  the signal is three or more in a paragraph with no number, source, or
+  decision. A "Keep" list covers terms of art.
+- `SKILL.md`: two sub-patterns added. Reader flattery as an opener (failure
+  mode 1): praise for the reader's company or work before anything the reader
+  needs. Echoing the brief (failure mode 4): the request's own phrases
+  returned as if they were findings.
+- `references/failure-modes.md`: section 8, the vocabulary list with a
+  before/after pair for each group. Section 10, two complete documents (an
+  internal status memo, an email to a customer) rewritten start to finish,
+  with every cut labeled by failure mode, a list of what survived, and, for
+  the memo, what a rewrite cannot fix: the original was hiding two facts the
+  writer did not have, and the rewrite leaves brackets rather than inventing
+  them. The cadence section is now numbered 9 and listed in the contents.
+- `scripts/cadence.py`: three false positives fixed. A bare `>` between
+  quoted paragraphs, a horizontal rule, and a line that is only an HTML tag
+  (the anchors in the reference file) were each being read as a one-word
+  sentence. Run over `failure-modes.md`, hits drop from 18 to 11, none of them
+  in the new sections.
+
 ## 1.2.0 — 2026-08-21
 
 - `slop-free-writing/scripts/cadence.py`: the cadence checks as a runnable

@@ -17,16 +17,21 @@ When the skill is active, Claude writes and edits against four failure modes:
 
 Each failure mode ships with "do not flag" counterexamples, because the point is judgment, not word-banning. "The bug is in the parser, not the tokenizer" uses contrast and survives; "It's not X, it's Y" as manufactured rhythm does not. Sourced figures, technical terms, legal conditions, real hedges, warmth, and humor all stay.
 
-The skill also carries the grading standard for good writing (lead with the conclusion, concrete subjects, evidence attached to claims, structure that fits the task), formatting defaults (minimal styling, no decorative treatments), and a five-step revision pass Claude runs when editing a draft.
+The skill also carries the grading standard for good writing (lead with the conclusion, concrete subjects, evidence attached to claims, structure that fits the task), a vocabulary list grouped by what each word is standing in for (a verb hiding an action, an adjective hiding its evidence, a noun hiding a name or number), formatting defaults (minimal styling, no decorative treatments), a mechanical cadence check for rhythm that survives a read-through, and a five-step revision pass Claude runs when editing a draft. The reference file ends with two complete documents rewritten start to finish, with every cut labeled by failure mode.
 
 ## Repository contents
 
 ```
 slop-free-writing/
-├── SKILL.md                     # The skill: standard, failure modes, revision pass
-└── references/
-    └── failure-modes.md         # Full example bank: 15 rewrite pairs, all bad
-                                 # examples, ~30 labeled calibration cases
+├── SKILL.md                     # The skill: standard, failure modes, vocabulary,
+│                                # cadence check, revision pass
+├── references/
+│   └── failure-modes.md         # Full example bank: rewrite pairs, all bad
+│                                # examples, ~30 labeled calibration cases, the
+│                                # vocabulary list with rewrites, multi-sentence
+│                                # cadence cases, two full-document rewrites
+└── scripts/
+    └── cadence.py               # The four cadence checks as a runnable script
 dist/
 └── slop-free-writing.skill      # Packaged skill, ready to upload
 ```
