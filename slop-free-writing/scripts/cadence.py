@@ -15,7 +15,9 @@ heading-pattern one: deciding that a heading broke its own pattern for effect
 needs to know what the headings are for.
 
 Skipped, because short lines there are correct rather than staccato: fenced
-code, YAML frontmatter, tables, list items, blockquotes and headings.
+code, YAML frontmatter, tables, list items, blockquotes (including the bare
+">" between quoted paragraphs), headings, horizontal rules, and lines that
+are only an HTML tag such as an anchor.
 """
 
 from __future__ import annotations
@@ -52,7 +54,11 @@ def prose_blocks(text: str) -> list[tuple[int, str]]:
             fence = not fence
             i += 1
             continue
-        skip = fence or not ln.strip() or re.match(r"^\s*(#+|[>|\-*+]|\d+\.)\s", ln) or ln.startswith("|")
+        skip = (fence or not ln.strip()
+                or re.match(r"^\s*(#+|[>|\-*+]|\d+\.)(\s|$)", ln)   # heading, quote, list; bare ">" too
+                or ln.startswith("|")
+                or re.match(r"^\s*(-{3,}|\*{3,}|_{3,})\s*$", ln)      # horizontal rule
+                or re.match(r"^\s*<[^>]+>(\s*</[^>]+>)?\s*$", ln))    # a line that is only an HTML tag, e.g. an anchor
         if skip:
             if buf:
                 out.append((start, " ".join(buf)))
