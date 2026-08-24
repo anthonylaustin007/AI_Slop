@@ -28,12 +28,13 @@ Watch for:
 - Staged cadence and mannered punctuation: "Owners are set; risks are checked; approval is granted — and the launch moves forward." / "Universities: reinforce guidance. Students: reduce social activity."
 - Rhetorical triads: "Faster, smarter, and more intuitive."
 - Canned empathy: "I completely understand how frustrating this must feel."
+- Reader flattery as an opener: praise for the reader's company, mission, or work before anything the reader needs. "I have long admired your team's commitment to excellence." The reader learns nothing about the writer and nothing they did not already know about themselves.
 - Synthetic balance with no real tradeoff: "While remote work offers flexibility, it also presents unique challenges."
 - Inflated significance: mundane facts recast as "legacy," "pivotal moments," an "evolving landscape"
 - Promotional adjectives: vibrant, rich, renowned, groundbreaking, nestled
 - Vague authorities: "experts argue," "observers note," "research consistently shows" with no source
 - Canned endings: generic "challenges," "legacy," or "future outlook" conclusions
-- AI-vocabulary clusters: delve, pivotal, robust, tapestry, underscore, showcase, foster, intricate, landscape, testament, vibrant
+- AI-vocabulary clusters: delve, pivotal, robust, tapestry, underscore, showcase, foster, intricate, landscape, testament, vibrant, and the rest of the list under "Vocabulary" below. One is fine; three in a paragraph with no number, source, or decision is the signal.
 - Overlong parallel enumerations — rhythmic catalogues that simulate exhaustiveness after the point is made
 - Mechanical bold-label bullet walls (**Label:** explanation, repeated) when nobody asked for that structure
 
@@ -84,6 +85,7 @@ Watch for:
 
 - Generic scene-setting: "In today's fast-paced digital landscape…"
 - Restating the request: "When it comes to improving employee onboarding, there are several strategies to consider."
+- Echoing the brief: the request's own phrases returned as if they were findings. A brief that asks for "a customer obsessed roadmap" and gets back "this customer obsessed roadmap" has been quoted, not answered. Say what the roadmap does instead.
 - Meta-announcements: "Below is a polished and comprehensive rewrite tailored to your needs."
 - Redundant conclusions: "In conclusion, adopting these strategies can help organizations achieve their goals."
 - Excessive structure: a two-sentence answer split across six headings and twelve bullets.
@@ -91,6 +93,18 @@ Watch for:
 **Fix:** start with the answer or decision. Delete setup and recaps. Use the lightest structure that helps the reader act or find information.
 
 **Keep:** framing that narrows scope, corrects the request, or helps readers navigate reference material: "This memo covers the two launch decisions due Friday."
+
+## Vocabulary
+
+These words are not banned. They are common in model output for one reason: each lets a sentence sound finished without saying what happened. When one appears, ask what plain word or fact it is standing in for. When three or more appear in a paragraph that has no number, source, or decision, rewrite the paragraph.
+
+- Verbs that inflate an ordinary action: leverage, utilize, harness, unlock, empower, elevate, streamline, spearhead, bolster, foster, facilitate, drive, navigate, delve, underscore, showcase, embark, revolutionize, transform, optimize, ensure, enable. Each hides what was actually done. "Leveraged cross-functional partnerships" was, in fact, "asked Sales for the churn list."
+- Adjectives that assert quality with the evidence removed: robust, seamless, comprehensive, holistic, transformative, innovative, cutting edge, dynamic, pivotal, crucial, critical, key, vital, essential, meaningful, impactful, actionable, scalable, powerful, strategic, intricate, nuanced, multifaceted, vibrant, rich, renowned, groundbreaking, world class, best in class, state of the art, ever evolving. If the system is robust, say what it survived.
+- Nouns that gesture at scale instead of naming the thing: landscape, tapestry, testament, journey, realm, ecosystem, synergy, paradigm, cornerstone, beacon, game changer, north star, framework, solution, insights, value, impact, outcomes, alignment, stakeholders, the space. Name the customer, the number, the team, or the decision instead.
+- Stock phrases that occupy the slot where the point should be: at its core, at the end of the day, it's worth noting, it's important to note, in today's world, in the ever evolving, in the realm of, dive into, deep dive, a wide range of, plays a crucial role, serves as, stands as, boasts, is a testament to, moving forward, going forward, navigate the complexities, the intersection of, when it comes to, whether it's X or Y, look no further, rest assured, I hope this finds you well, let's dive in, in a world where. Delete the phrase and read the sentence again: if it still stands, the phrase was filler; if it collapses, there was no sentence.
+- Transitions doing work the sentences should do on their own: Additionally, Moreover, Furthermore, Firstly, Secondly, Lastly, Ultimately, Overall, In summary, In conclusion, In essence, Notably, Importantly, Crucially, Interestingly, That said, That being said, Simply put. A paragraph that needs Moreover three times is a list wearing prose; either make it a list or find the relationship between the sentences and state it.
+
+**Keep:** any of these words used for its literal meaning or as a term of art, such as "landscape" in a piece about land, "robust standard errors" in statistics, "critical path" in a schedule, "framework" when it is React, "optimize" when there is a stated objective and a measurement, and "ensure" when it describes a mechanism ("the check ensures the file exists before the job starts"). The word is not the problem; the missing fact behind it is.
 
 ## What good writing looks like
 
@@ -148,8 +162,9 @@ dependencies, and exits non-zero when it finds something:
 scripts/cadence.py draft.md          # or: cat draft.md | scripts/cadence.py -
 ```
 
-It skips code fences, frontmatter, headings, tables, lists and blockquotes,
-where short lines are correct rather than staccato. It cannot judge whether a
+It skips code fences, frontmatter, headings, tables, lists, blockquotes,
+horizontal rules and bare HTML tags, where short lines are correct rather
+than staccato. It cannot judge whether a
 flagged run earns its rhythm, so treat a hit as "look at this". A paragraph
 genuinely *about* two sentences will trip check 4 and be right to.
 
@@ -169,4 +184,4 @@ When editing a draft (yours or the user's), make one deliberate pass:
 
 Do not mention this framework or the editing process in the output unless the user asks.
 
-For the full example bank — rewrite pairs plus calibration cases showing which borderline sentences count as slop and which don't — read `references/failure-modes.md`.
+For the full example bank — rewrite pairs, calibration cases showing which borderline sentences count as slop and which don't, and two documents rewritten start to finish with every cut labeled — read `references/failure-modes.md`.
